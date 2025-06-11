@@ -1,0 +1,5 @@
+Acest script Python citeste coordonatele GPS in timp real de la un modul GPS conectat la portul serial al placii (de exemplu, Raspberry Pi). Programul foloseste pachetul pyserial pentru comunicare cu modulul GPS si pachetul pynmea2 pentru a interpreta liniile NMEA receptionate (standard folosit de majoritatea modulelor GPS).
+
+La fiecare iteratie a buclei, scriptul citeste o linie din fluxul serial, verifica daca aceasta incepe cu unul dintre mesajele standard de localizare ($GPGGA sau $GPRMC), si daca da, incearca sa parseeze linia pentru a extrage latitudinea si longitudinea. Daca pararea reuseste, coordonatele geografice sunt afisate in consola; in caz contrar, codul ignora linia respectiva si trece mai departe.
+
+Scriptul este util pentru testarea si monitorizarea rapida a unui modul GPS, verificand daca acesta transmite corect datele de localizare si daca interfata seriala functioneaza corespunzator. Poate fi integrat cu usurinta in proiecte mai complexe care au nevoie de coordonate GPS in timp real.
