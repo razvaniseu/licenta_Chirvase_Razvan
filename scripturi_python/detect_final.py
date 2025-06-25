@@ -33,11 +33,11 @@ model = YOLO(model_path, task='detect')
 labels = model.names
 
 # ------------------- INITIALIZARE GPS & GSM -------------------
-# Schimba porturile daca folosesti altele!
+
 gps_ser = serial.Serial('/dev/ttyAMA3', 9600, timeout=1)     # Port GPS (ex. SIM808)
 gsm_ser = serial.Serial('/dev/ttyAMA0', 9600, timeout=2)     # Port GSM (ex. SIM800L)
 
-# Seteaza numarul de telefon destinatar (format international, ex: +407...)
+# Seteaza numarul de telefon destinatar 
 numar_telefon = "+40712345678"
 
 # Functie pentru trimiterea SMS-ului prin SIM800L
